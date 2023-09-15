@@ -78,8 +78,8 @@
             var button = document.getElementById('meu-botao');
             var imagecontainer = document.getElementById("imagecontainer");
             
-            button.addEventListener("click", () => { // Correção aqui: remova o parêntese extra após "click"
-                var audio = document.getElementById('audio'); // Adicione esta linha para obter o elemento de áudio
+            button.addEventListener("click", () => { 
+                var audio = document.getElementById('audio');
                 audio.play();
                 button.style.zIndex = 0;
                 setTimeout(() => {
