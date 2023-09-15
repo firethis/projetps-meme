@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>welive</title>
+
+    <style>
+        html,body {
+            height: 100%;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+        body {
+            background-color: black;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            row-gap: 50px;
+            position: relative;
+        }
+
+        h1 {
+            width: 100%;
+            text-align: center;
+            font-weight: 500;
+            font-size: 30px;
+        }
+        button {
+            padding: 14px 30px;
+            border-radius: 8px;
+            font-weight: 900;
+            font-size: 25px;
+            background-image: linear-gradient(#ffffff, #dcdcdc);
+            color: #1414ff;
+            border: 2px solid #1414ff;
+            cursor: pointer;
+            z-index: 2;
+            transition: 0.1s;
+        }
+        button:hover {
+            background-image: linear-gradient(#ffffff,#ffffff);
+        }
+        button:active {
+            padding: 12px 28px;
+            background-image: linear-gradient(#dcdcdc,#dcdcdc);
+        }
+        img {
+            height: 100%;
+            max-width: 100%;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .hidden {
+            opacity: 0;
+            transition: opacity 2s ease-in;
+        }
+    </style>
+</head>
+<body>
+    <audio id="audio" src="https://www.myinstants.com/media/sounds/we-live-we-love-we-lie.mp3" preload="auto">
+    </audio>
+        <h1>To indo...</h1>
+        <button id="meu-botao">INDO ONDE?</button>
+
+        <div id="imagecontainer" class="hidden">
+            <img src="https://progmatico.com.br/media/indo-ali.png" alt="images">
+        </div>
+        <script>
+            var button = document.getElementById('meu-botao');
+            var imagecontainer = document.getElementById("imagecontainer");
+            
+            button.addEventListener("click", () => { // Correção aqui: remova o parêntese extra após "click"
+                var audio = document.getElementById('audio'); // Adicione esta linha para obter o elemento de áudio
+                audio.play();
+                button.style.zIndex = 0;
+                setTimeout(() => {
+                    imagecontainer.style.opacity = 1;
+                }, 100);
+                
+            });
+        </script>
+</body>
+</html>
