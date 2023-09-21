@@ -1,0 +1,6 @@
+ALLOWED_CHANNEL_ID=1153593692779708437
+CHARACTERS=Rias Gremory,Satoru Gojou,Zero Two,Asuna,Hatsune Miku,Megumin,Saber,Albedo,Roronoa Zoro,Sukuna,Aki Hayakawa
+MIN_VALUE_CHARACTERS=500
+MIN_VALUE_KAKERA=5000
+MARRY_ALL_WISHED=true
+TOKEN=
